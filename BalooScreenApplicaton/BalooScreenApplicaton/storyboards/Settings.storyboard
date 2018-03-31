@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="8Jn-Pc-xig">
+            <objects>
+                <windowController storyboardIdentifier="SettingWindowCtrl" showSeguePresentationStyle="single" id="Mkj-Ne-eGD" customClass="SettingsWindowController" customModule="BalooScreenApplicaton" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Mir-A0-I5N">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="362" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+                        <connections>
+                            <outlet property="delegate" destination="Mkj-Ne-eGD" id="iGU-Km-V96"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="4lP-mz-ntJ" kind="relationship" relationship="window.shadowedContentViewController" id="elT-a0-jdo"/>
+                    </connections>
+                </windowController>
+                <customObject id="VGN-Ai-hqT" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-387" y="-30"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JF7-d5-hl9">
+            <objects>
+                <viewController id="4lP-mz-ntJ" sceneMemberID="viewController">
+                    <view key="view" id="xcW-Ra-WlK">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pCC-UK-kzb">
+                                <rect key="frame" x="77" y="175" width="81" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="r3m-fr-Mex">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="AY1-0L-aYj" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="-94"/>
+        </scene>
+    </scenes>
+</document>
