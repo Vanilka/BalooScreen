@@ -19,6 +19,13 @@ class MainWindowController: NSWindowController {
     @IBAction func settingsClick(_ sender: Any) {
         print("Setting Click")
 
-        }
     }
+
+    @IBAction func customScreenShootClick(_ sender: Any) {
+        print("Custom click")
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "stopSoundNotification"), object: nil)
+    }
+
+
+}
 

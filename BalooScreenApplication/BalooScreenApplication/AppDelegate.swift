@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  BalooScreenApplicaton
+//  BalooScreenApplication
 //
-//  Created by Vanilka on 30/03/2018.
+//  Created by Vanilka on 02/04/2018.
 //  Copyright © 2018 Vanilla. All rights reserved.
 //
 
@@ -11,10 +11,11 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    let cm : ConfigurationManager = ConfigurationManager.selfInstance
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
     // Insert code here to initialize your application
+
     }
 
 

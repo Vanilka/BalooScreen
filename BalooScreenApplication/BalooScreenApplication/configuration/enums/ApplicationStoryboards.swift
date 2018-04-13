@@ -13,5 +13,4 @@ enum ApplicationStoryboards : String {
     var instance : NSStoryboard {
         return NSStoryboard(name: NSStoryboard.Name(rawValue: self.rawValue), bundle: Bundle.main)
     }
-
 }

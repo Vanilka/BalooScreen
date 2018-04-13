@@ -1,15 +1,15 @@
 //
-//  BalooScreenApplicatonTests.swift
-//  BalooScreenApplicatonTests
+//  BalooScreenApplicationTests.swift
+//  BalooScreenApplicationTests
 //
-//  Created by Vanilka on 30/03/2018.
+//  Created by Vanilka on 02/04/2018.
 //  Copyright © 2018 Vanilla. All rights reserved.
 //
 
 import XCTest
-@testable import BalooScreenApplicaton
+@testable import BalooScreenApplication
 
-class BalooScreenApplicatonTests: XCTestCase {
+class BalooScreenApplicationTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
