@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810BE8FB208286F500CBD151 /* ScreenTranparentWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8F9208286F500CBD151 /* ScreenTranparentWindowController.swift */; };
+		810BE8FE2082883A00CBD151 /* ScreenTransparentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8FD2082883A00CBD151 /* ScreenTransparentViewController.swift */; };
+		810BE9002082893200CBD151 /* ModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8FF2082893200CBD151 /* ModalAnimator.swift */; };
+		810BE906208292D800CBD151 /* Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810BE905208292D800CBD151 /* Screen.storyboard */; };
 		8181D3002080310000F79D34 /* ScreenSizeWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8181D2FF2080310000F79D34 /* ScreenSizeWindowController.swift */; };
 		81E5AF3420802E0C003DA5D3 /* ScreenSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5AF3320802E0C003DA5D3 /* ScreenSizeViewController.swift */; };
 		DE4DB0716B705F6BF5D4192D /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DB0C0236B0983EE4D76B9 /* MainWindowController.swift */; };
@@ -14,7 +18,6 @@
 		DE4DB383DFE314CF987070A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4DB8400B256D69FB5FB589 /* Main.storyboard */; };
 		DE4DB4EE21435DC6F15B0EC5 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DB081A85FF55B3D9FADC4 /* ConfigurationManager.swift */; };
 		DE4DB51CDF430268E4DB7748 /* BalooScreenApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DB6BC2E2C3A7290397A04 /* BalooScreenApplicationUITests.swift */; };
-		DE4DB55BABFFDC9B51288662 /* testController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DBCE8E0745AB986D86C62 /* testController.swift */; };
 		DE4DB661236A1C16C10FCA79 /* SettingsFileSystemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DBEBA3EB747E7A22B24BD /* SettingsFileSystemController.swift */; };
 		DE4DB7D9BD69EC3D239DCFE9 /* ConfigKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DBFA402D4CBB8FF74FBA5 /* ConfigKeys.swift */; };
 		DE4DB7FB747BC919931802C5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DB1F1E1593F2F83D1C58A /* Configuration.swift */; };
@@ -52,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		810BE8F9208286F500CBD151 /* ScreenTranparentWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTranparentWindowController.swift; sourceTree = "<group>"; };
+		810BE8FD2082883A00CBD151 /* ScreenTransparentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTransparentViewController.swift; sourceTree = "<group>"; };
+		810BE8FF2082893200CBD151 /* ModalAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAnimator.swift; sourceTree = "<group>"; };
+		810BE905208292D800CBD151 /* Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Screen.storyboard; sourceTree = "<group>"; };
 		8181D2FF2080310000F79D34 /* ScreenSizeWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeWindowController.swift; sourceTree = "<group>"; };
 		81E5AF3320802E0C003DA5D3 /* ScreenSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeViewController.swift; sourceTree = "<group>"; };
 		DE4DB010D9B65D8BBB72560C /* ScreenService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenService.swift; sourceTree = "<group>"; };
@@ -78,7 +85,6 @@
 		DE4DBABE8F9721E22A12C5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE4DBB7C166A4BEB5AF06D49 /* BalooScreenApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalooScreenApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4DBB8E8E3BBA7BA0763FBD /* settings_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_icon.png; sourceTree = "<group>"; };
-		DE4DBCE8E0745AB986D86C62 /* testController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testController.swift; sourceTree = "<group>"; };
 		DE4DBD2AA724EB2ACA2395D8 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		DE4DBE275CF990A6B602503A /* fullscreen_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullscreen_icon.png; sourceTree = "<group>"; };
 		DE4DBEBA3EB747E7A22B24BD /* SettingsFileSystemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsFileSystemController.swift; sourceTree = "<group>"; };
@@ -202,6 +208,7 @@
 			children = (
 				DE4DBD2AA724EB2ACA2395D8 /* Settings.storyboard */,
 				DE4DB8400B256D69FB5FB589 /* Main.storyboard */,
+				810BE905208292D800CBD151 /* Screen.storyboard */,
 			);
 			path = storyboards;
 			sourceTree = "<group>";
@@ -237,10 +244,12 @@
 				DE4DB0C0236B0983EE4D76B9 /* MainWindowController.swift */,
 				DE4DB026024E9FDC7126BCD8 /* ViewController.swift */,
 				DE4DB6D6B6FA0C1ACD7D27DD /* SettingsWindowController.swift */,
-				DE4DBCE8E0745AB986D86C62 /* testController.swift */,
 				DE4DBEBA3EB747E7A22B24BD /* SettingsFileSystemController.swift */,
 				81E5AF3320802E0C003DA5D3 /* ScreenSizeViewController.swift */,
 				8181D2FF2080310000F79D34 /* ScreenSizeWindowController.swift */,
+				810BE8F9208286F500CBD151 /* ScreenTranparentWindowController.swift */,
+				810BE8FD2082883A00CBD151 /* ScreenTransparentViewController.swift */,
+				810BE8FF2082893200CBD151 /* ModalAnimator.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -354,6 +363,7 @@
 				DE4DB9988673DDAE83CA2C61 /* save_icon.png in Resources */,
 				DE4DBA0ABEE4498B58D22201 /* config.plist in Resources */,
 				DE4DBDADEAC62860C96E8396 /* Settings.storyboard in Resources */,
+				810BE906208292D800CBD151 /* Screen.storyboard in Resources */,
 				DE4DB383DFE314CF987070A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,18 +383,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810BE8FE2082883A00CBD151 /* ScreenTransparentViewController.swift in Sources */,
 				DE4DB85217923829F60BFDE4 /* AppDelegate.swift in Sources */,
 				DE4DB4EE21435DC6F15B0EC5 /* ConfigurationManager.swift in Sources */,
 				DE4DBC635E59D3D47A206570 /* Suffixes.swift in Sources */,
 				DE4DB7FB747BC919931802C5 /* Configuration.swift in Sources */,
 				DE4DB0716B705F6BF5D4192D /* MainWindowController.swift in Sources */,
+				810BE9002082893200CBD151 /* ModalAnimator.swift in Sources */,
 				DE4DBB6D8214542FB025F13F /* ViewController.swift in Sources */,
 				DE4DB2A169109F4929C6E98B /* SettingsWindowController.swift in Sources */,
-				DE4DB55BABFFDC9B51288662 /* testController.swift in Sources */,
 				DE4DB661236A1C16C10FCA79 /* SettingsFileSystemController.swift in Sources */,
 				DE4DBFA4DDD6FB6D9443B848 /* ScreenService.swift in Sources */,
 				DE4DB7D9BD69EC3D239DCFE9 /* ConfigKeys.swift in Sources */,
 				DE4DBCDEF1CC4D05ABCC085A /* Titles.swift in Sources */,
+				810BE8FB208286F500CBD151 /* ScreenTranparentWindowController.swift in Sources */,
 				DE4DBA6A87524351A29E9E64 /* ApplicationStoryboards.swift in Sources */,
 				81E5AF3420802E0C003DA5D3 /* ScreenSizeViewController.swift in Sources */,
 				8181D3002080310000F79D34 /* ScreenSizeWindowController.swift in Sources */,

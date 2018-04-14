@@ -10,11 +10,15 @@ import Cocoa
 
 class ScreenSizeViewController: NSViewController, NSTextFieldDelegate {
 
+    var observingFloat = false
+
     @IBOutlet weak var widthField: NSTextField!
     @IBOutlet weak var heightField: NSTextField!
 
     @IBOutlet weak var widthStepper: NSStepper!
     @IBOutlet weak var heightStepper: NSStepper!
+
+    var screenTransparentController: ScreenTransparentViewController? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +28,26 @@ class ScreenSizeViewController: NSViewController, NSTextFieldDelegate {
 
         initSteppersMaxValues()
         initWidthAndHeightFieldsValues()
+
+        initOnTopObserver()
+        loadScreenTransparentWindow()
     }
 
-    /**
-        Update Textfields if changes occured.
-        Needs textfield.delegate = self in viedDidLoadFunction
-    */
+    private func initOnTopObserver() {
+        if self.view.window != nil {
+            view.window?.level = NSWindow.Level(rawValue: 1)
+        } else {
+            observingFloat = true
+            self.addObserver(self, forKeyPath: "view.window", options: [.new, .initial], context: nil)
+        }
+    }
+
+
+    override func viewWillAppear() {
+        NSApplication.shared.activate(ignoringOtherApps: true)
+    }
+
+
     public override func controlTextDidChange(_ obj: Notification) {
         if let textField = obj.object as? NSTextField {
 
@@ -46,7 +64,6 @@ class ScreenSizeViewController: NSViewController, NSTextFieldDelegate {
             }
         }
     }
-
 
     private func initWidthAndHeightFieldsValues() {
         widthField.stringValue = String(100.0)
@@ -72,9 +89,35 @@ class ScreenSizeViewController: NSViewController, NSTextFieldDelegate {
 
     @IBAction func cancel(_ sender: Any) {
         self.view.window?.close()
+        screenTransparentController?.view.window?.close()
     }
 
     @IBAction func confirm(_ sender: Any) {
     }
 
+    public func registerScreenTransparentController(controller: ScreenTransparentViewController) {
+        screenTransparentController = controller
+    }
+
+    private func loadScreenTransparentWindow() { // Do view setup here.
+        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Screen"), bundle: nil)
+
+        if let screenController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "ScreenTransparent")) as? ScreenTransparentViewController {
+
+            screenController.registerScreenSizeController(controller: self)
+            screenTransparentController = screenController
+            let newWindow = NSWindow(contentViewController: screenController)
+            // you'll probably need to pass your window some data and because I hate myself I choose to do it like this
+            newWindow.makeKeyAndOrderFront(self)
+            let controller = ScreenTransparentWindowController(window: newWindow)
+            controller.windowDidLoad()
+            controller.showWindow(self)
+        }
+    }
+
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
+        if self.view.window != nil {
+            view.window?.level = NSWindow.Level(rawValue: 1)
+        }
+    }
 }

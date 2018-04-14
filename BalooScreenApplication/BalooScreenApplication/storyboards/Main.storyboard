@@ -678,7 +678,7 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-1847" y="-1207"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -746,7 +746,7 @@
                                         </buttonCell>
                                         <connections>
                                             <action selector="customScreenShootClick" target="B8D-0N-5wS" id="7ag-ek-7Gc"/>
-                                            <segue destination="5WN-gM-bqj" kind="modal" id="oSW-7Q-5l2"/>
+                                            <segue destination="Na3-vf-DXs" kind="show" id="ifG-e4-gZD"/>
                                         </connections>
                                     </button>
                                 </toolbarItem>
@@ -784,7 +784,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="192" y="357"/>
+            <point key="canvasLocation" x="-1730" y="-850"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1S6-hP-geb">
@@ -807,7 +807,7 @@
                 </viewController>
                 <customObject id="OJJ-hs-Hxf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96" y="855"/>
+            <point key="canvasLocation" x="-1826" y="-352"/>
         </scene>
         <!--SettingWindowCtrl-->
         <scene sceneID="zy3-At-9iQ">
@@ -815,106 +815,107 @@
                 <controllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingWindowCtrl" id="hVe-Do-fPD" sceneMemberID="viewController"/>
                 <customObject id="2bM-a5-ZVe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="307"/>
+            <point key="canvasLocation" x="-1007" y="-900"/>
         </scene>
         <!--Window Controller-->
-        <scene sceneID="gRp-sW-gdr">
+        <scene sceneID="uyd-NA-xuA">
             <objects>
-                <windowController showSeguePresentationStyle="single" id="5WN-gM-bqj" customClass="ScreenSizeWindowController" customModule="BalooScreenApplication" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="MM2-CZ-fNT">
+                <windowController showSeguePresentationStyle="single" id="Na3-vf-DXs" customClass="ScreenSizeWindowController" customModule="BalooScreenApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="QMo-Em-WAn">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="294" y="362" width="300" height="150"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
                         <connections>
-                            <outlet property="delegate" destination="5WN-gM-bqj" id="9Aa-fl-ppZ"/>
+                            <outlet property="delegate" destination="Na3-vf-DXs" id="zIS-Xu-3wb"/>
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="cfe-tQ-vIC" kind="relationship" relationship="window.shadowedContentViewController" id="0aY-oU-5uq"/>
+                        <segue destination="4Er-MH-IFr" kind="relationship" relationship="window.shadowedContentViewController" id="CEN-FR-Ykg"/>
                     </connections>
                 </windowController>
-                <customObject id="wAC-XW-ZbL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="XuR-ga-hCq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="757" y="899"/>
+            <point key="canvasLocation" x="-1143" y="-373"/>
         </scene>
         <!--Screen Size View Controller-->
-        <scene sceneID="zmg-ch-YY7">
+        <scene sceneID="5fM-vH-ZEo">
             <objects>
-                <viewController id="cfe-tQ-vIC" customClass="ScreenSizeViewController" customModule="BalooScreenApplication" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="CFG-Vd-PXg">
+                <customObject id="v8h-2u-Yld" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="ScreenSizeWindow" showSeguePresentationStyle="single" id="4Er-MH-IFr" customClass="ScreenSizeViewController" customModule="BalooScreenApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" identifier="ScreenSizeWindow" id="82K-Zv-JwT">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Smx-SS-sdq">
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NW0-An-TuW">
                                 <rect key="frame" x="159" y="13" width="104" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" title="Confirm" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gpU-J2-k5X">
+                                <buttonCell key="cell" type="smallSquare" title="Confirm" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XU3-Ha-AhK">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="confirm:" target="cfe-tQ-vIC" id="FVo-za-SKJ"/>
+                                    <action selector="confirm:" target="4Er-MH-IFr" id="nfI-oF-WwN"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rGl-cK-E9B">
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JnO-VY-3CW">
                                 <rect key="frame" x="20" y="13" width="106" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" title="Cancel" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cvo-44-hVa">
+                                <buttonCell key="cell" type="smallSquare" title="Cancel" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KYp-iZ-J6R">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <connections>
-                                        <action selector="cancel:" target="cfe-tQ-vIC" id="ypW-Mn-SFH"/>
+                                        <action selector="cancel:" target="4Er-MH-IFr" id="9tu-zX-3eg"/>
                                     </connections>
                                 </buttonCell>
                             </button>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CB4-gg-fId">
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="09u-Wf-Szw">
                                 <rect key="frame" x="217" y="105" width="19" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="-1" maxValue="-1" doubleValue="-1" id="kU4-Kx-Zyd"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="-1" maxValue="-1" doubleValue="-1" id="9t9-Rv-Cvx"/>
                                 <connections>
-                                    <action selector="widthStep:" target="cfe-tQ-vIC" id="1dk-bI-J5n"/>
+                                    <action selector="widthStep:" target="4Er-MH-IFr" id="qwF-2Y-IQO"/>
                                 </connections>
                             </stepper>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OJR-MJ-wrc">
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xg1-9J-6oN">
                                 <rect key="frame" x="217" y="64" width="19" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" id="Ypj-rI-pYZ"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" id="ZiQ-Nc-UxV"/>
                                 <connections>
-                                    <action selector="heightStep:" target="cfe-tQ-vIC" id="dfY-5J-V5z"/>
+                                    <action selector="heightStep:" target="4Er-MH-IFr" id="P1Z-GL-8G3"/>
                                 </connections>
                             </stepper>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyD-7B-gvx">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DfF-Gc-Glr">
                                 <rect key="frame" x="60" y="107" width="69" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Width:" id="A2a-VD-jpY">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Width:" id="zpI-GM-Mkp">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NrU-dX-QeX">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4m1-nm-yiB">
                                 <rect key="frame" x="58" y="66" width="69" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Height: " id="cUq-ik-RSb">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Height: " id="EPB-8O-ewj">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vaJ-KZ-scb">
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gTa-A6-uvb">
                                 <rect key="frame" x="116" y="66" width="96" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="iqt-1V-SDR">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="B5j-K4-DoS">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t5G-0j-fqW">
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZDF-vi-H5j">
                                 <rect key="frame" x="116" y="108" width="96" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="5n8-Vp-7B0">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="51C-bJ-zZQ">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -923,15 +924,14 @@
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="heightField" destination="vaJ-KZ-scb" id="lSf-Tc-sed"/>
-                        <outlet property="heightStepper" destination="OJR-MJ-wrc" id="2bD-mZ-dow"/>
-                        <outlet property="widthField" destination="t5G-0j-fqW" id="OqJ-I1-xA9"/>
-                        <outlet property="widthStepper" destination="CB4-gg-fId" id="MrK-0i-RCb"/>
+                        <outlet property="heightField" destination="gTa-A6-uvb" id="Nas-cU-CFZ"/>
+                        <outlet property="heightStepper" destination="Xg1-9J-6oN" id="PIC-OG-wHW"/>
+                        <outlet property="widthField" destination="ZDF-vi-H5j" id="Eet-pX-obO"/>
+                        <outlet property="widthStepper" destination="09u-Wf-Szw" id="ukQ-h4-zIe"/>
                     </connections>
                 </viewController>
-                <customObject id="NRj-cn-ShQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1233" y="899"/>
+            <point key="canvasLocation" x="-718" y="-379"/>
         </scene>
     </scenes>
     <resources>

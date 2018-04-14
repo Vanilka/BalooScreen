@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="hu5-Dc-kKm">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="a0L-hS-fhv">
+            <objects>
+                <customObject id="Q1t-k1-CpC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <windowController showSeguePresentationStyle="single" id="baG-og-cto" customClass="ScreenSizeWindowController" customModule="BalooScreenApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="AQZ-EU-AD6">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="362" width="300" height="150"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+                        <connections>
+                            <outlet property="delegate" destination="baG-og-cto" id="02q-dE-bfy"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="OIg-tG-FZ8" kind="relationship" relationship="window.shadowedContentViewController" id="0bY-4T-9kk"/>
+                    </connections>
+                </windowController>
+            </objects>
+            <point key="canvasLocation" x="-161" y="1231"/>
+        </scene>
+        <!--Screen Size View Controller-->
+        <scene sceneID="6VH-Qh-Y5S">
+            <objects>
+                <customObject id="kh6-ip-LyU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="ScreenSizeWindow" id="OIg-tG-FZ8" customClass="ScreenSizeViewController" customModule="BalooScreenApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" identifier="ScreenSizeWindow" id="etw-XN-cMW">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="026-XR-U5X">
+                                <rect key="frame" x="159" y="13" width="104" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="Confirm" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HgV-If-e9R">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="confirm:" target="OIg-tG-FZ8" id="FNB-JJ-WfR"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D8p-2A-y69">
+                                <rect key="frame" x="20" y="13" width="106" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="Cancel" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7wZ-Zi-yar">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="cancel:" target="OIg-tG-FZ8" id="wwy-c2-R02"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pra-3y-vRt">
+                                <rect key="frame" x="217" y="105" width="19" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" minValue="-1" maxValue="-1" doubleValue="-1" id="7LW-cn-N7s"/>
+                                <connections>
+                                    <action selector="widthStep:" target="OIg-tG-FZ8" id="70f-C7-FWe"/>
+                                </connections>
+                            </stepper>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zrd-8v-NzW">
+                                <rect key="frame" x="217" y="64" width="19" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" id="AMM-u0-XXa"/>
+                                <connections>
+                                    <action selector="heightStep:" target="OIg-tG-FZ8" id="UqA-zO-nLC"/>
+                                </connections>
+                            </stepper>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RX4-P7-5FF">
+                                <rect key="frame" x="60" y="107" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Width:" id="7lb-Ot-FZ7">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dPl-TO-7vb">
+                                <rect key="frame" x="58" y="66" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Height: " id="eW9-ZX-RQh">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEP-KC-rVE">
+                                <rect key="frame" x="116" y="66" width="96" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="sQa-17-nZG">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s6U-44-SkZ">
+                                <rect key="frame" x="116" y="108" width="96" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Ne8-qB-csa">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="heightField" destination="aEP-KC-rVE" id="A4f-4Y-x2u"/>
+                        <outlet property="heightStepper" destination="zrd-8v-NzW" id="rRM-Je-YOf"/>
+                        <outlet property="widthField" destination="s6U-44-SkZ" id="Ymr-gn-9wz"/>
+                        <outlet property="widthStepper" destination="pra-3y-vRt" id="cvg-4o-jWz"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="336" y="1238"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="SJJ-Um-VJo">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="hu5-Dc-kKm" customClass="ScreenTranparentWindowController" customModule="BalooScreenApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="HyB-E2-PuG">
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="362" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+                        <connections>
+                            <outlet property="delegate" destination="hu5-Dc-kKm" id="UC6-N2-Ro9"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="tQ3-5J-gMw" kind="relationship" relationship="window.shadowedContentViewController" id="0t9-XD-zOB"/>
+                    </connections>
+                </windowController>
+                <customObject id="i3e-my-PqM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="465"/>
+        </scene>
+        <!--Screen Transparent View Controller-->
+        <scene sceneID="cYS-KX-mJ1">
+            <objects>
+                <viewController storyboardIdentifier="ScreenTransparent" showSeguePresentationStyle="single" id="tQ3-5J-gMw" customClass="ScreenTransparentViewController" customModule="BalooScreenApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" identifier="ScreenTransparent" id="mzA-ug-uHa">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="071-IO-Pg8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="336" y="480"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
+</document>
