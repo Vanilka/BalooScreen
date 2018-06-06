@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		810BE8FB208286F500CBD151 /* ScreenTranparentWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8F9208286F500CBD151 /* ScreenTranparentWindowController.swift */; };
-		810BE8FE2082883A00CBD151 /* ScreenTransparentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8FD2082883A00CBD151 /* ScreenTransparentViewController.swift */; };
+		810BE8FB208286F500CBD151 /* ScreenSemiTranparentWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8F9208286F500CBD151 /* ScreenSemiTranparentWindowController.swift */; };
+		810BE8FE2082883A00CBD151 /* ScreenSemiTransparentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8FD2082883A00CBD151 /* ScreenSemiTransparentViewController.swift */; };
 		810BE9002082893200CBD151 /* ModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8FF2082893200CBD151 /* ModalAnimator.swift */; };
 		810BE906208292D800CBD151 /* Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810BE905208292D800CBD151 /* Screen.storyboard */; };
 		8181D3002080310000F79D34 /* ScreenSizeWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8181D2FF2080310000F79D34 /* ScreenSizeWindowController.swift */; };
@@ -35,6 +35,7 @@
 		DE4DBECFAE1253A0AADEE3C0 /* customscreen_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DE4DB7E9C2947C0B3A0B8503 /* customscreen_icon.png */; };
 		DE4DBEEDA851BDF34CD18952 /* settings_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DE4DBB8E8E3BBA7BA0763FBD /* settings_icon.png */; };
 		DE4DBFA4DDD6FB6D9443B848 /* ScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DB010D9B65D8BBB72560C /* ScreenService.swift */; };
+		E16E98BB20C68A730048243C /* FullTransparentRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E98BA20C68A730048243C /* FullTransparentRect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		810BE8F9208286F500CBD151 /* ScreenTranparentWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTranparentWindowController.swift; sourceTree = "<group>"; };
-		810BE8FD2082883A00CBD151 /* ScreenTransparentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTransparentViewController.swift; sourceTree = "<group>"; };
+		810BE8F9208286F500CBD151 /* ScreenSemiTranparentWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSemiTranparentWindowController.swift; sourceTree = "<group>"; };
+		810BE8FD2082883A00CBD151 /* ScreenSemiTransparentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSemiTransparentViewController.swift; sourceTree = "<group>"; };
 		810BE8FF2082893200CBD151 /* ModalAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAnimator.swift; sourceTree = "<group>"; };
 		810BE905208292D800CBD151 /* Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Screen.storyboard; sourceTree = "<group>"; };
 		8181D2FF2080310000F79D34 /* ScreenSizeWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeWindowController.swift; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		DE4DB18D98699D0062DD5320 /* ApplicationStoryboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStoryboards.swift; sourceTree = "<group>"; };
 		DE4DB1F1E1593F2F83D1C58A /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		DE4DB3D1D7E215882E052B0D /* Titles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Titles.swift; sourceTree = "<group>"; };
-		DE4DB5ABD0C6F4773959423C /* BalooScreenApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalooScreenApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4DB6167C7013E3F76BB2EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		DE4DB640E4BCEA8B90868AAD /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = config.plist; sourceTree = "<group>"; };
 		DE4DB66FED9FE9A232408E10 /* BalooScreenApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalooScreenApplicationTests.swift; sourceTree = "<group>"; };
@@ -80,16 +80,15 @@
 		DE4DB6D6B6FA0C1ACD7D27DD /* SettingsWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
 		DE4DB7E9C2947C0B3A0B8503 /* customscreen_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customscreen_icon.png; sourceTree = "<group>"; };
 		DE4DB8400B256D69FB5FB589 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		DE4DB8755F3B6E6453A39EE1 /* BalooScreenApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalooScreenApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4DB96C9286A95E1E74B368 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE4DBABE8F9721E22A12C5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE4DBB7C166A4BEB5AF06D49 /* BalooScreenApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalooScreenApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4DBB8E8E3BBA7BA0763FBD /* settings_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_icon.png; sourceTree = "<group>"; };
 		DE4DBD2AA724EB2ACA2395D8 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		DE4DBE275CF990A6B602503A /* fullscreen_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullscreen_icon.png; sourceTree = "<group>"; };
 		DE4DBEBA3EB747E7A22B24BD /* SettingsFileSystemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsFileSystemController.swift; sourceTree = "<group>"; };
 		DE4DBF861142FE8C76F6D2D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		DE4DBFA402D4CBB8FF74FBA5 /* ConfigKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigKeys.swift; sourceTree = "<group>"; };
+		E16E98BA20C68A730048243C /* FullTransparentRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTransparentRect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,9 +147,6 @@
 		DE4DB3A494D6D733A0B19445 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE4DB8755F3B6E6453A39EE1 /* BalooScreenApplication.app */,
-				DE4DBB7C166A4BEB5AF06D49 /* BalooScreenApplicationTests.xctest */,
-				DE4DB5ABD0C6F4773959423C /* BalooScreenApplicationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,9 +243,10 @@
 				DE4DBEBA3EB747E7A22B24BD /* SettingsFileSystemController.swift */,
 				81E5AF3320802E0C003DA5D3 /* ScreenSizeViewController.swift */,
 				8181D2FF2080310000F79D34 /* ScreenSizeWindowController.swift */,
-				810BE8F9208286F500CBD151 /* ScreenTranparentWindowController.swift */,
-				810BE8FD2082883A00CBD151 /* ScreenTransparentViewController.swift */,
+				810BE8F9208286F500CBD151 /* ScreenSemiTranparentWindowController.swift */,
+				810BE8FD2082883A00CBD151 /* ScreenSemiTransparentViewController.swift */,
 				810BE8FF2082893200CBD151 /* ModalAnimator.swift */,
+				E16E98BA20C68A730048243C /* FullTransparentRect.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -272,7 +269,6 @@
 			);
 			name = BalooScreenApplicationUITests;
 			productName = BalooScreenApplicationUITests;
-			productReference = DE4DB5ABD0C6F4773959423C /* BalooScreenApplicationUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		DE4DB1732189BF89D51B72DC /* BalooScreenApplicationTests */ = {
@@ -290,7 +286,6 @@
 			);
 			name = BalooScreenApplicationTests;
 			productName = BalooScreenApplicationTests;
-			productReference = DE4DBB7C166A4BEB5AF06D49 /* BalooScreenApplicationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		DE4DB20DDFDF75AA073A926F /* BalooScreenApplication */ = {
@@ -307,7 +302,6 @@
 			);
 			name = BalooScreenApplication;
 			productName = BalooScreenApplication;
-			productReference = DE4DB8755F3B6E6453A39EE1 /* BalooScreenApplication.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -383,7 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				810BE8FE2082883A00CBD151 /* ScreenTransparentViewController.swift in Sources */,
+				810BE8FE2082883A00CBD151 /* ScreenSemiTransparentViewController.swift in Sources */,
 				DE4DB85217923829F60BFDE4 /* AppDelegate.swift in Sources */,
 				DE4DB4EE21435DC6F15B0EC5 /* ConfigurationManager.swift in Sources */,
 				DE4DBC635E59D3D47A206570 /* Suffixes.swift in Sources */,
@@ -396,10 +390,11 @@
 				DE4DBFA4DDD6FB6D9443B848 /* ScreenService.swift in Sources */,
 				DE4DB7D9BD69EC3D239DCFE9 /* ConfigKeys.swift in Sources */,
 				DE4DBCDEF1CC4D05ABCC085A /* Titles.swift in Sources */,
-				810BE8FB208286F500CBD151 /* ScreenTranparentWindowController.swift in Sources */,
+				810BE8FB208286F500CBD151 /* ScreenSemiTranparentWindowController.swift in Sources */,
 				DE4DBA6A87524351A29E9E64 /* ApplicationStoryboards.swift in Sources */,
 				81E5AF3420802E0C003DA5D3 /* ScreenSizeViewController.swift in Sources */,
 				8181D3002080310000F79D34 /* ScreenSizeWindowController.swift in Sources */,
+				E16E98BB20C68A730048243C /* FullTransparentRect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,8 +13,6 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(getScreenshot), name: Notification.Name(rawValue: "stopSoundNotification"), object: nil)
-        //        // Do any additional setup after loading the view.
     }
 
 

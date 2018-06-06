@@ -18,7 +18,7 @@ class ScreenSizeViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var widthStepper: NSStepper!
     @IBOutlet weak var heightStepper: NSStepper!
 
-    var screenTransparentController: ScreenTransparentViewController? = nil
+    var screenSemiTransparentController: ScreenTransparentViewController? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,8 @@ class ScreenSizeViewController: NSViewController, NSTextFieldDelegate {
         initWidthAndHeightFieldsValues()
 
         initOnTopObserver()
-        loadScreenTransparentWindow()
+        loadScreenSemiTransparentWindow()
+
     }
 
     private func initOnTopObserver() {
@@ -57,10 +58,12 @@ class ScreenSizeViewController: NSViewController, NSTextFieldDelegate {
 
             if textField.identifier == widthField.identifier {
                 widthStepper.doubleValue = value
+                screenSemiTransparentController?.transparentHoleView?.setWidth(width: CGFloat(value))
             }
 
             if textField.identifier == heightField.identifier {
                 heightStepper.doubleValue = value
+                screenSemiTransparentController?.transparentHoleView?.setHeight(height: CGFloat(value))
             }
         }
     }
@@ -81,40 +84,44 @@ class ScreenSizeViewController: NSViewController, NSTextFieldDelegate {
 
     @IBAction func widthStep(_ sender: NSStepper) {
         widthField.stringValue = String(sender.doubleValue)
+        screenSemiTransparentController?.transparentHoleView?.setWidth(width: CGFloat(sender.doubleValue))
+       // fullTransparentFrame?.setWidth(width: CGFloat(sender.doubleValue))
     }
 
     @IBAction func heightStep(_ sender: NSStepper) {
         heightField.stringValue = String(sender.doubleValue)
+        screenSemiTransparentController?.transparentHoleView?.setHeight(height: CGFloat(sender.doubleValue))
     }
 
     @IBAction func cancel(_ sender: Any) {
         self.view.window?.close()
-        screenTransparentController?.view.window?.close()
+        screenSemiTransparentController?.view.window?.close()
     }
 
     @IBAction func confirm(_ sender: Any) {
+        self.view.window?.close()
+        screenSemiTransparentController?.view.window?.close()
     }
 
     public func registerScreenTransparentController(controller: ScreenTransparentViewController) {
-        screenTransparentController = controller
+        screenSemiTransparentController = controller
     }
 
-    private func loadScreenTransparentWindow() { // Do view setup here.
+    private func loadScreenSemiTransparentWindow() { // Do view setup here.
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Screen"), bundle: nil)
 
-        if let screenController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "ScreenTransparent")) as? ScreenTransparentViewController {
-
+        if let screenController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "ScreenSemiTransparent")) as? ScreenTransparentViewController {
             screenController.registerScreenSizeController(controller: self)
-            screenTransparentController = screenController
+
             let newWindow = NSWindow(contentViewController: screenController)
             // you'll probably need to pass your window some data and because I hate myself I choose to do it like this
             newWindow.makeKeyAndOrderFront(self)
-            let controller = ScreenTransparentWindowController(window: newWindow)
+            screenSemiTransparentController = screenController
+            let controller = ScreenSemiTransparentWindowController(window: newWindow)
             controller.windowDidLoad()
             controller.showWindow(self)
         }
     }
-
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
         if self.view.window != nil {
             view.window?.level = NSWindow.Level(rawValue: 1)
