@@ -4,12 +4,14 @@
 //
 
 import Foundation
-class ScreenService {
-    static let sharedInstance =  ScreenService()
+import Cocoa
 
-    private var width:Float
-    private var height:Float
-    private var layoutX:Float
+class ScreenService {
+    static let sharedInstance = ScreenService()
+
+    private var width: Float
+    private var height: Float
+    private var layoutX: Float
     private var layoutY: Float
 
 
@@ -24,8 +26,9 @@ class ScreenService {
 
     }
 
-    public func doCustomScreen() {
-
+    public func doRegionScreen(_ region: CGRect) -> CGImage {
+        let displayID = CGMainDisplayID()
+        return CGDisplayCreateImage(displayID, rect: region)!
     }
 
 }

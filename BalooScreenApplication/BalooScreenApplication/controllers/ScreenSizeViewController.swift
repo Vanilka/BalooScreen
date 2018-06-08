@@ -19,6 +19,7 @@ class ScreenSizeViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var heightStepper: NSStepper!
 
     var screenSemiTransparentController: ScreenTransparentViewController? = nil
+    var transparentHoleView: FullTransparentRect? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,7 +86,7 @@ class ScreenSizeViewController: NSViewController, NSTextFieldDelegate {
     @IBAction func widthStep(_ sender: NSStepper) {
         widthField.stringValue = String(sender.doubleValue)
         screenSemiTransparentController?.transparentHoleView?.setWidth(width: CGFloat(sender.doubleValue))
-       // fullTransparentFrame?.setWidth(width: CGFloat(sender.doubleValue))
+        // fullTransparentFrame?.setWidth(width: CGFloat(sender.doubleValue))
     }
 
     @IBAction func heightStep(_ sender: NSStepper) {
@@ -100,8 +101,56 @@ class ScreenSizeViewController: NSViewController, NSTextFieldDelegate {
 
     @IBAction func confirm(_ sender: Any) {
         self.view.window?.close()
+        getScreenshotRect3()
         screenSemiTransparentController?.view.window?.close()
+
     }
+
+    @objc func getScreenshotRect() {
+
+        var rect = transparentHoleView?.frame
+        print("Original hole is \(rect)")
+
+        rect = screenSemiTransparentController?.view.convert(rect!, to: nil)
+
+
+        print("converted is \(rect)")
+
+        rect = screenSemiTransparentController?.view.window?.convertToScreen(rect!)
+
+        print(" to screen converted is \(rect)")
+
+        let userInfo = ["image": ScreenService.sharedInstance.doRegionScreen(rect!)]
+        NotificationCenter.default.post(name: .imageNotification, object: nil, userInfo: userInfo)
+    }
+
+    @objc func getScreenshotRect2() {
+
+        var rect = self.view.frame
+        print("Original hole is \(rect)")
+
+        rect = self.view.convert(rect, to: nil)
+        print("converted is \(rect)")
+
+        rect = (self.view.window?.convertToScreen(rect))!
+
+        print(" to screen converted is \(rect)")
+
+        let userInfo = ["image": ScreenService.sharedInstance.doRegionScreen(rect)]
+        NotificationCenter.default.post(name: .imageNotification, object: nil, userInfo: userInfo)
+    }
+
+
+    @objc func getScreenshotRect3() {
+
+        var rect = NSScreen.main?.frame
+        print("Original hole main is \(rect)")
+
+
+        let userInfo = ["image": ScreenService.sharedInstance.doRegionScreen(rect!)]
+        NotificationCenter.default.post(name: .imageNotification, object: nil, userInfo: userInfo)
+    }
+
 
     public func registerScreenTransparentController(controller: ScreenTransparentViewController) {
         screenSemiTransparentController = controller
@@ -118,10 +167,15 @@ class ScreenSizeViewController: NSViewController, NSTextFieldDelegate {
             newWindow.makeKeyAndOrderFront(self)
             screenSemiTransparentController = screenController
             let controller = ScreenSemiTransparentWindowController(window: newWindow)
+
+            transparentHoleView = FullTransparentRect(frame: NSRect(x: 100, y: 100, width: widthField.doubleValue, height: heightField.doubleValue))
+            screenController.view.addSubview(transparentHoleView!)
+
             controller.windowDidLoad()
             controller.showWindow(self)
         }
     }
+
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
         if self.view.window != nil {
             view.window?.level = NSWindow.Level(rawValue: 1)

@@ -11,16 +11,36 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var screenShootImage: NSImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Me load")
+
     }
 
+    override func viewWillAppear() {
+        super.viewWillAppear()
+
+
+
+        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationReceived(_:)), name: .imageNotification, object: nil)
+
+
+    }
 
     override var representedObject: Any? {
         didSet {
             // Update the view, if already loaded.
         }
     }
+
+     func updateImage(image: NSImage) {
+        screenShootImage.image = image
+         screenShootImage.imageScaling = .scaleProportionallyDown
+
+    }
+
 
     @objc func getScreenshot() {
     /*    print("do screens")
@@ -69,6 +89,15 @@ class ViewController: NSViewController {
     @objc func loadList(notification: Notification) {
         print("test load")
 
+    }
+
+    @objc func notificationReceived(_ notification: Notification) {
+        print("revieved image")
+        guard let text: CGImage = notification.userInfo?["image"] as! CGImage else {
+            print("will return without save")
+            return }
+
+       updateImage(image: NSImage(cgImage: text, size: NSZeroSize))
     }
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		275AA9969BB4B01F6B2BCAC5 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275AAF6265F2A350C5CA21BD /* Extentions.swift */; };
 		810BE8FB208286F500CBD151 /* ScreenSemiTranparentWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8F9208286F500CBD151 /* ScreenSemiTranparentWindowController.swift */; };
 		810BE8FE2082883A00CBD151 /* ScreenSemiTransparentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8FD2082883A00CBD151 /* ScreenSemiTransparentViewController.swift */; };
 		810BE9002082893200CBD151 /* ModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8FF2082893200CBD151 /* ModalAnimator.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		275AAF6265F2A350C5CA21BD /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		810BE8F9208286F500CBD151 /* ScreenSemiTranparentWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSemiTranparentWindowController.swift; sourceTree = "<group>"; };
 		810BE8FD2082883A00CBD151 /* ScreenSemiTransparentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSemiTransparentViewController.swift; sourceTree = "<group>"; };
 		810BE8FF2082893200CBD151 /* ModalAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAnimator.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				DE4DB1F1E1593F2F83D1C58A /* Configuration.swift */,
 				DE4DBDC88EAE3935F9E146D9 /* enums */,
 				DE4DBFA96B85184463E4E542 /* strings */,
+				275AAF6265F2A350C5CA21BD /* Extentions.swift */,
 			);
 			path = configuration;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				81E5AF3420802E0C003DA5D3 /* ScreenSizeViewController.swift in Sources */,
 				8181D3002080310000F79D34 /* ScreenSizeWindowController.swift in Sources */,
 				E16E98BB20C68A730048243C /* FullTransparentRect.swift in Sources */,
+				275AA9969BB4B01F6B2BCAC5 /* Extentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

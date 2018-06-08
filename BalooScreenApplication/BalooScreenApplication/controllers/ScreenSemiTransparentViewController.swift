@@ -18,9 +18,6 @@ class ScreenTransparentViewController: NSViewController {
 
         self.view.wantsLayer = true
         self.view.layer?.backgroundColor = NSColor(calibratedHue: 0, saturation: 0, brightness: 0, alpha: 0.7).cgColor
-        transparentHoleView = FullTransparentRect(frame: NSRect(x:100, y:100, width: 200, height: 200))
-        self.view.addSubview(transparentHoleView!)
-
     }
 
     override func viewDidLayout() {
